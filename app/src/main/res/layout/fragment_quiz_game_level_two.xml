@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_default"
+    android:padding="25dp"
+    tools:context=".fragments.QuizGameLevelOneFragment">
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circularProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="17dp"
+        android:indeterminate="true"
+        app:indicatorColor="#FF35B8"
+        app:indicatorInset="5dp"
+        app:indicatorSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/frontierImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/questionNumberTwoTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showDelay="@integer/material_motion_duration_short_1"
+        app:trackColor="@color/white"
+        app:trackCornerRadius="20dp"
+        app:trackThickness="4dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/frontierImageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cristo_image"
+        app:layout_constraintBottom_toTopOf="@+id/questionTwoTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/countDownTextView"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circularProgressIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator"
+        app:layout_constraintStart_toStartOf="@+id/circularProgressIndicator"
+        app:layout_constraintTop_toTopOf="@+id/circularProgressIndicator" />
+
+    <TextView
+        android:id="@+id/questionTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="@string/second_question"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="10"
+            android:minHeight="50dp"
+            android:outlineSpotShadowColor="@color/pink"
+            android:progress="0" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/firstButtonQuestionTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_button"
+        android:padding="15dp"
+        android:text="@string/first_answer_second_question"
+        app:layout_constraintEnd_toEndOf="@+id/secondButtonQuestionTwo"
+        app:layout_constraintStart_toStartOf="@+id/secondButtonQuestionTwo"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fourthButtonQuestionTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_button"
+        android:text="@string/fourth_answer_second_question"
+        app:layout_constraintTop_toBottomOf="@+id/thirdButtonQuestionTwo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/secondButtonQuestionTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_button"
+        android:focusable="true"
+        android:padding="15dp"
+        android:text="@string/second_answer_second_question"
+        app:layout_constraintEnd_toEndOf="@+id/thirdButtonQuestionTwo"
+        app:layout_constraintStart_toStartOf="@+id/thirdButtonQuestionTwo"
+        app:layout_constraintTop_toBottomOf="@+id/firstButtonQuestionTwo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/thirdButtonQuestionTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_button"
+        android:padding="15dp"
+        android:text="@string/third_answer_second_question"
+        app:layout_constraintEnd_toEndOf="@+id/fourthButtonQuestionTwo"
+        app:layout_constraintStart_toStartOf="@+id/fourthButtonQuestionTwo"
+        app:layout_constraintTop_toBottomOf="@+id/secondButtonQuestionTwo" />
+
+    <TextView
+        android:id="@+id/questionNumberTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="170dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/question_number_two_position"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/questionTwoTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

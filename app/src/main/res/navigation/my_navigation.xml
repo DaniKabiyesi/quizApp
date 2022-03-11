@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/quizGameNickname">
+
+
+    <fragment
+        android:id="@+id/quizGameNickname"
+        android:name="com.studying.quizchallenge.fragments.QuizGameNicknameFragment"
+        android:label="fragment_quiz_game_nickname"
+        tools:layout="@layout/fragment_quiz_game_nickname">
+        <action
+            android:id="@+id/action_quizGameNickname_to_quizGameLevelOneFragment"
+            app:destination="@id/quizGameLevelOneFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelOneFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelOneFragment"
+        android:label="fragment_quiz_game_level_one"
+        tools:layout="@layout/fragment_quiz_game_level_one">
+        <action
+            android:id="@+id/action_quizGameLevelOneFragment_to_quizGameLevelTwoFragment"
+            app:destination="@id/quizGameLevelTwoFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelOneFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelTwoFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelTwoFragment"
+        android:label="fragment_quiz_game_level_two"
+        tools:layout="@layout/fragment_quiz_game_level_two">
+        <action
+            android:id="@+id/action_quizGameLevelTwoFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+        <action
+            android:id="@+id/action_quizGameLevelTwoFragment_to_quizGameLevelThreeFragment"
+            app:destination="@id/quizGameLevelThreeFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelThreeFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelThreeFragment"
+        android:label="fragment_quiz_game_level_three"
+        tools:layout="@layout/fragment_quiz_game_level_three" >
+        <action
+            android:id="@+id/action_quizGameLevelThreeFragment_to_quizGameLevelFourFragment"
+            app:destination="@id/quizGameLevelFourFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelThreeFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelFourFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelFourFragment"
+        android:label="fragment_quiz_game_level_four"
+        tools:layout="@layout/fragment_quiz_game_level_four" >
+        <action
+            android:id="@+id/action_quizGameLevelFourFragment_to_quizGameLevelFiveFragment"
+            app:destination="@id/quizGameLevelFiveFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelFourFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelFiveFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelFiveFragment"
+        android:label="fragment_quiz_game_level_five"
+        tools:layout="@layout/fragment_quiz_game_level_five" >
+        <action
+            android:id="@+id/action_quizGameLevelFiveFragment_to_quizGameLevelSixFragment"
+            app:destination="@id/quizGameLevelSixFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelFiveFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelSixFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelSixFragment"
+        android:label="fragment_quiz_game_level_six"
+        tools:layout="@layout/fragment_quiz_game_level_six" >
+        <action
+            android:id="@+id/action_quizGameLevelSixFragment_to_quizGameLevelSevenFragment"
+            app:destination="@id/quizGameLevelSevenFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelSixFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelSevenFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelSevenFragment"
+        android:label="fragment_quiz_game_level_seven"
+        tools:layout="@layout/fragment_quiz_game_level_seven" >
+        <action
+            android:id="@+id/action_quizGameLevelSevenFragment_to_quizGameLevelEightFragment"
+            app:destination="@id/quizGameLevelEightFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_quizGameLevelSevenFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameLevelEightFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameLevelEightFragment"
+        android:label="fragment_quiz_game_level_eight"
+        tools:layout="@layout/fragment_quiz_game_level_eight" >
+        <action
+            android:id="@+id/action_quizGameLevelEightFragment_to_quizGameOverFragment"
+            app:destination="@id/quizGameOverFragment" />
+        <action
+            android:id="@+id/action_quizGameLevelEightFragment_to_quizGameWinFragment"
+            app:destination="@id/quizGameWinFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameWinFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameWinFragment"
+        android:label="fragment_quiz_game_win"
+        tools:layout="@layout/fragment_quiz_game_win" />
+    <fragment
+        android:id="@+id/quizGameOverFragment"
+        android:name="com.studying.quizchallenge.fragments.QuizGameOverFragment"
+        android:label="fragment_quiz_game_over"
+        tools:layout="@layout/fragment_quiz_game_over" />
+
+
+</navigation>
