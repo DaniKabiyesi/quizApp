@@ -1,9 +1,9 @@
 package com.studying.quizchallenge
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.studying.quizchallenge.databinding.ActivityQuickDisplayBinding
 
 class QuickDisplayActivity : AppCompatActivity() {

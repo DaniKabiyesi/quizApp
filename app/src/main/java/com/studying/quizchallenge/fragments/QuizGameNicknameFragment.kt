@@ -1,11 +1,11 @@
 package com.studying.quizchallenge.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.studying.quizchallenge.R
 import com.studying.quizchallenge.databinding.FragmentQuizGameNicknameBinding
@@ -14,6 +14,7 @@ class QuizGameNicknameFragment : Fragment() {
 
     private lateinit var _binding: FragmentQuizGameNicknameBinding
     private val binding get() = _binding
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,21 +26,26 @@ class QuizGameNicknameFragment : Fragment() {
             container,
             false
         )
-        goPlayQuiz()
+        setListeners()
+
         return binding.root
     }
 
-    private fun goPlayQuiz() {
+    private fun setListeners() {
         binding.run {
             startGameBtn.setOnClickListener {
-
-                if (nicknameIsBlank()) {
-                    goToNextScreen()
-                    showStartGameToast()
-
-                } else {
-                    showTypeNicknameToast()
-                }
+                val message =
+                    if (nicknameIsNotBlank()) {
+                        goToNextScreen()
+                        "Bom jogo"
+                    } else {
+                        "Digite seu Nickname, por favor"
+                    }
+                Toast.makeText(
+                    requireContext(),
+                    message,
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
@@ -48,24 +54,9 @@ class QuizGameNicknameFragment : Fragment() {
         findNavController().navigate(R.id.quizGameLevelOneFragment)
     }
 
-    private fun showTypeNicknameToast() {
-        Toast.makeText(
-            this@QuizGameNicknameFragment.requireActivity(),
-            "Digite seu nickname, por favor",
-            Toast.LENGTH_SHORT
-        ).show()
+    private fun nicknameIsNotBlank(): Boolean {
+        binding.run {
+            return nicknameEditText.text.toString().isNotBlank()
+        }
     }
-
-    private fun showStartGameToast() {
-        Toast.makeText(
-            this@QuizGameNicknameFragment.requireContext(),
-            "Bom jogo!",
-            Toast.LENGTH_SHORT
-        ).show()
-    }
-
-    private fun nicknameIsBlank(): Boolean {
-        return binding.nicknameEditText.text.toString().isNotBlank()
-    }
-
 }

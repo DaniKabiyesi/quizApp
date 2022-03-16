@@ -1,7 +1,6 @@
 package com.studying.quizchallenge
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.studying.quizchallenge.databinding.ActivityQuizGameBinding

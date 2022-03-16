@@ -59,4 +59,6 @@
     <string name="welcome_text">Bem-Vindo</string>
     <string name="nickname_text">Insira seu nickname, por favor!</string>
     <string name="nickname_hint">Nickname</string>
+    <string name="let_s_play">Let\'s play</string>
+    <string name="logonikcname">logoNikcname</string>
 </resources>
