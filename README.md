@@ -5,4 +5,4 @@ O layout do app foi baseado no ConstraintLayout, sendo utilizado elementos do Ma
 
 Tecnologias usadas: ViewBinding, Fragments, AndroidX, ConstraintLayout.
 
-<img height="140em" src="https://imagizer.imageshack.com/img924/6640/bBU4Dq.jpg"/>
+<img src="https://imagizer.imageshack.com/img924/6640/bBU4Dq.jpg"/>
