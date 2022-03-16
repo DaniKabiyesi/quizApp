@@ -7,3 +7,7 @@ Tecnologias usadas: ViewBinding, Fragments, AndroidX, ConstraintLayout.
 
 <p align="center" width="wrap_content" height="500" src="https://imagizer.imageshack.com/img924/6640/bBU4Dq.jpg"/>
 </p>
+
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
